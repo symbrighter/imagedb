@@ -6,7 +6,7 @@ BUILT_SOURCES = imagedb.pb.h
 vpath %.proto ../proto
 
 dist_noinst_DATA = imagedb.proto
-noinst_PROGRAMS = imagedb-server imagedb-client
+bin_PROGRAMS = imagedb-server imagedb-client
 
 imagedb_server_SOURCES = \
 	$(builddir)/imagedb.pb.cc \
