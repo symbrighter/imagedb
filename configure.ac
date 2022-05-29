@@ -37,7 +37,8 @@ AC_CONFIG_FILES([Makefile
   imagelogue/db/Makefile
   imagelogue/db/test/Makefile
   imagelogue/cli/Makefile
-  t/Makefile])
+  t/Makefile
+  etc/Makefile])
 AC_OUTPUT
 
 echo "
