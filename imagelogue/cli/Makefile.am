@@ -53,9 +53,8 @@ imagedb_client_LDADD = \
 	-ldl
 
 %.grpc.pb.cc %.grpc.pb.h: %.proto
-	echo "Depedency met"
 	$(PROTOC) --proto_path=../proto --grpc_out=$(builddir) \
-		  --plugin=protoc-gen-grpc=/home/dahn/.local/bin/grpc_cpp_plugin $^
+		  --plugin=/usr/local/bin/grpc_cpp_plugin $^
 
 %.pb.cc %.pb.h: %.proto
 	$(PROTOC) --proto_path=../proto --cpp_out=$(builddir) $^
