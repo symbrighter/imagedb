@@ -61,4 +61,12 @@ RUN \
 RUN \
  ln -s /usr/local/bin/grpc_cpp_plugin /usr/bin/protoc-gen-grpc
 
-
+RUN \
+ mkdir IM \
+ && cd IM \
+ && git clone https://github.com/symbrighter/imagedb.git \
+ && cd imagedb \
+ && ./autogen.sh \
+ && ./configure --prefix=/usr --sysconfdir=/etc \
+ && make \
+ && sudo make install
