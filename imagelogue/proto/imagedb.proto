@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package imagedb;
+
+service ImageDb {
+    rpc insert (ImageDbInsertRequest) returns (ImageDbInsertReply) {}
+}
+
+message ImageDbInsertRequest {
+    string path = 1;
+}
+
+message ImageDbInsertReply {
+    string message = 1;
+}
+
+/*
+ * vi:tabstop=4 shiftwidth=4 expandtab
+ */
