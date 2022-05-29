@@ -1,2 +1,2 @@
-SUBDIRS = src imagelogue t
+SUBDIRS = src imagelogue t etc
 
