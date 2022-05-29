@@ -108,6 +108,11 @@ extern "C" int main (int argc, char*argv[])
 
     plan (10);
 
+    if (system ("rm -f ./image1.jpg") < 0)
+        exit (1);
+    if (system ("touch ./image1.jpg") < 0)
+        exit (1);
+
     rc = sqlite3_open (":memory:", &db);
     ok (rc == 0, "sqlite3_open succeeded");
 
@@ -116,6 +121,9 @@ extern "C" int main (int argc, char*argv[])
     add_rows (db);
 
     insert_image (db);
+
+    if (system ("rm -f ./image1.jpg") < 0)
+        exit (1);
 
     sqlite3_close (db);
 
